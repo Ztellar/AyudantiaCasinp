@@ -3,6 +3,23 @@ package org.example;
 import java.util.ArrayList;
 
 public class Mano {
-    private ArrayList<String> mano = new ArrayList<String>();
+    private ArrayList<Carta> cartas;
 
+    public Mano(ArrayList<Carta> cartas) {
+        this.cartas = cartas;
+    }
+
+    public Mano() {
+    }
+    public void addCarta(Carta nuevaCarta){
+        cartas.add(nuevaCarta);
+    }
+    public ArrayList<Carta> getCartas() {
+        return cartas;
+    }
+
+    @Override
+    public String toString() {
+        return "Mano{" + "cartas=" + cartas + '}';
+    }
 }
